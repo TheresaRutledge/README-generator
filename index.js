@@ -1,5 +1,7 @@
 // inquirer npm install
 const inquirer = require('inquirer');
+const { writeFile } = require('fs');
+const generateMarkdown = require('./utils/generateMarkdown');
 
 // array of questions for user
 const questions = [
@@ -64,22 +66,8 @@ const questions = [
         type: 'list',
         name: 'license',
         message: 'What license did you use?',
-        choices: ['MIT', 'GNU AGPLv3', 'GNU GPLv3', 'GNU LGPLv3','No license', 'Other']
+        choices: ['MIT', 'GNU AGPLv3', 'GNU GPLv3', 'GNU LGPLv3','No license']
 
-    },
-    {
-        type: 'input',
-        name: 'otherLicense',
-        message: 'What license did you use?',
-        when: ({ license }) => (license === 'Other'),
-        validate: licenseInput => {
-            if(licenseInput){
-                return true;
-            } else {
-                console.log('Please enter a license');
-                return false;
-            }
-        }     
     },
     //Contributing
     {
@@ -99,7 +87,15 @@ const questions = [
     {
         type:'input',
         name:'test',
-        message: 'Provide examples on how to test your project'
+        message: 'Provide examples on how to test your project',
+        validate: testInput => {
+            if(testInput){
+                return true;
+            } else {
+                console.log('Please enter examples to test your project')
+                return false;
+            }
+        }
     },
     //Questions
     {
@@ -133,6 +129,10 @@ const questions = [
 
 // function to write README file
 function writeToFile(fileName, data) {
+    writeFile(fileName,data, err => {
+         if(err) throw err;
+         console.log('Your file has been created. Checkout out the dist folder.')
+    })
 }
 
 // function to initialize program
@@ -141,5 +141,15 @@ function init() {
 }
 
 // function call to initialize program
-init()
-.then(userInput=>console.log(userInput));
+init()//calls questions prompts
+//then take answers to generate MD file
+.then(userInput=> {
+    return generateMarkdown(userInput)})
+//MD file content used to create new file    
+.then(pageMd => {
+    writeToFile('./dist/README.md',pageMd);
+
+})
+    
+    
+ 
