@@ -1,4 +1,3 @@
-// inquirer npm install
 const inquirer = require('inquirer');
 const { writeFile } = require('fs');
 const generateMarkdown = require('./utils/generateMarkdown');
@@ -140,15 +139,12 @@ function init() {
    return inquirer.prompt(questions);
 }
 
-// function call to initialize program
-init()//calls questions prompts
-//then take answers to generate MD file
+// function call to initialize program, then takes user answers to create markdown content which is then written to a README.md file in the dist folder
+init()
 .then(userInput=> {
-    return generateMarkdown(userInput)})
-//MD file content used to create new file    
+    return generateMarkdown(userInput)}) 
 .then(pageMd => {
-    writeToFile('./dist/README.md',pageMd);
-
+    writeToFile('./dist/README.md',pageMd)
 })
     
     
