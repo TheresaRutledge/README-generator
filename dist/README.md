@@ -1,7 +1,4 @@
-# Run Buddy  
-
-  ## Description
-  A website that offers fitness training services
+# sdf  ![](https://img.shields.io/badge/license-Mozilla-blue)
 
   ## Table of Contents
   * [Installation](#installation)
@@ -10,24 +7,27 @@
   * [Contributing](#contributing)
   * [Tests](#tests)
   * [Questions](#questions)
+  
+  ## Description
+  sdf
 
   ## Installation
-  Access it via the website link
+  sdf
 
   ## Usage
-  When you need a trainer to help you meet your goals
+  sdf
 
   ## License
-  MIT
+  This application is covered wtih a Mozilla license
 
   ## Contributing
-  email me using the contact info below 
+  sdf
 
   ## Tests
-  I don't know
+  sdf
 
   ## Questions
-  * Checkout my GitHub profile: https://github.com/theresarutledge
+  * Checkout my GitHub profile: https://github.com/sdf
   OR  
-  * Email me at: email@gmail.com
+  * Email me at: sdf
 

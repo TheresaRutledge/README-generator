@@ -66,7 +66,7 @@ const questions = [
         type: 'list',
         name: 'license',
         message: 'What license did you use?',
-        choices: ['MIT', 'GNU AGPLv3', 'GNU GPLv3', 'GNU LGPLv3','No license']
+        choices: ['MIT', 'GNU','Mozilla','Apache']
 
     },
     //Contributing
