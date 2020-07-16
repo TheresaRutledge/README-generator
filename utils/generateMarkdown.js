@@ -36,8 +36,7 @@ function generateMarkdown(data) {
   ${test}
 
   ## Questions
-  * Checkout my GitHub profile: https://github.com/${username}
-  OR  
+  * Checkout my GitHub profile: 'https://github.com/${username}'
   * Email me at: ${email}
 
 `;

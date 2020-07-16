@@ -1,4 +1,4 @@
-# sdf  ![](https://img.shields.io/badge/license-Mozilla-blue)
+# README.md Generator  ![](https://img.shields.io/badge/license-Other-blue)
 
   ## Table of Contents
   * [Installation](#installation)
@@ -9,25 +9,24 @@
   * [Questions](#questions)
   
   ## Description
-  sdf
+  Create a well formatted and professional README.md file for your project by answering a few command line prompts
 
   ## Installation
-  sdf
+  To install: Download or clone the repository to your local machine. Make sure to install inquirer npm. You must have Node.js for the program to work.
 
   ## Usage
-  sdf
+  To use the program run 'node index.js' from your terminal. You will be prompted to answer a few questions about your project. Once done your complete README file can be found in the dist folder.
 
   ## License
-  This application is covered wtih a Mozilla license
+  This application is covered wtih a Other license
 
   ## Contributing
-  sdf
+  If you would like to contribute please contact the email provided below
 
   ## Tests
-  sdf
+  This project currently doesn't have any tests
 
   ## Questions
-  * Checkout my GitHub profile: https://github.com/sdf
-  OR  
-  * Email me at: sdf
+  * Checkout my GitHub profile: 'https://github.com/theresarutledge'
+  * Email me at: email@gmail.com
 
